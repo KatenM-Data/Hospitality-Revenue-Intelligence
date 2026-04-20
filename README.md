@@ -45,3 +45,27 @@ The dashboard is fully interactive. In this view, the data is sliced to show onl
 ### 3. Relational Data Model (1-to-Many)
 The foundation of the dashboard. The `Guests` and `Bookings` tables are connected via a 1-to-Many relationship, ensuring data integrity and accurate DAX calculations.
 ![Data Model](data_model.png)
+
+### 🧠 DAX Logic & Analytical Measures
+To drive the business logic of the dashboard, I developed custom DAX measures. Below are key examples of the analytical engine used:
+
+**1. Total Revenue Generation**
+Calculates the aggregate revenue across all completed bookings.
+```dax
+Total Revenue Generated = SUM(Bookings[Revenue Generated])
+```
+**2. Completed Booking Volume**
+A dynamic count that filters out cancellations.
+code
+```daxDax
+Completed bookings = CALCULATE(COUNTROWS(Bookings),Bookings[Booking Status] = "Completed")
+```
+**3. Average Stay Duration**
+Provides insight into guest behavior by calculating the mean length of stay for completed transactions.
+```dax
+Avg Duration Days = 
+AVERAGEX(
+    FILTER('Bookings', 'Bookings'[Booking Status] = "Completed"),
+    DATEDIFF('Bookings'[Check-in Date], 'Bookings'[Check-out Date], DAY)
+)
+```
