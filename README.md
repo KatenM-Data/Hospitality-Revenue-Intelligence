@@ -29,8 +29,19 @@ Engineered custom DAX measures to provide an instant operational snapshot:
 *   **Detailed Booking Ledger:** Developed a granular table containing full guest itineraries, room types, and generated revenue.
 *   **Dynamic Filtering:** Implemented cross-filtering slicers (Booking Date, Booking Source, Booking Status) to allow stakeholders to drill down and conduct tailored analysis in real-time.
 
-## 📸 Dashboard Visualisation
-*(Add your final dashboard screenshot here, ensuring it shows the filters applied and the KPIs clearly visible).*
-
 ---
 *This project was completed as part of the Professional Certificate in Data Analytics & AI (Code Institute).*
+
+## 📸 Dashboard Visualisation & Architecture
+
+### 1. Executive View (Default)
+This view provides the high-level KPIs, including the £147K total revenue and overall demographic splits.
+![Main Dashboard](dashboard_main.png)
+
+### 2. Interactive Filtering (Booking Source: Website)
+The dashboard is fully interactive. In this view, the data is sliced to show only bookings originating from the 'Website', dynamically updating the revenue and room type visuals.
+![Filtered Dashboard](dashboard_filtered.png)
+
+### 3. Relational Data Model (1-to-Many)
+The foundation of the dashboard. The `Guests` and `Bookings` tables are connected via a 1-to-Many relationship, ensuring data integrity and accurate DAX calculations.
+![Data Model](data_model.png)
