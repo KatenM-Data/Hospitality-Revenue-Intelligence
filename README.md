@@ -1,12 +1,12 @@
 # 🏨 Hospitality Revenue & Booking Intelligence Dashboard (Power BI)
 
 ## 🎯 Executive Summary
-**GrandStay Hotels** required a centralized intelligence dashboard to optimize operations and enhance the guest experience. This project transforms raw booking and guest data into actionable insights, providing visibility into revenue generation, demographic trends, and booking source profitability.
+**GrandStay Hotels** required a centralised intelligence dashboard to optimise operations and enhance the guest experience. This project transforms raw booking and guest data into actionable insights, providing visibility into revenue generation, demographic trends, and booking source profitability.
 
-## 🛠️ Technical Stack & Data Modeling
+## 🛠️ Technical Stack & Data Modelling
 *   **Tool:** Power BI Desktop
-*   **Data Structure:** Relational Model (1-to-Many) linking `Guests` and `Bookings` tables.
-*   **Calculations:** Custom **DAX Measures** developed for core KPIs.
+*   **Data Structure:** Relational Model (1-to-Many Star Schema) linking `Guests` and `Bookings` tables.
+*   **Calculations:** Custom **DAX Measures** developed for core business KPIs.
 
 ## 📈 Key Business Solutions Delivered
 
@@ -14,16 +14,16 @@
 Engineered custom DAX measures to provide an instant operational snapshot:
 *   **Total Revenue Generated:** Calculated overall business profitability.
 *   **Completed Bookings:** Tracked the exact volume of successful stays.
-*   **Average Duration (Days):** Analyzed guest retention and stay patterns for completed bookings.
+*   **Average Duration (Days):** Analysed guest retention and stay patterns for completed bookings.
 
 ### 2. Operational Trend Analysis
-*   **Monthly Booking Trends:** Visualized seasonality across all booking statuses to support staffing and resource allocation during peak periods.
-*   **Room Type Popularity:** Displayed the proportion of bookings by room type (Standard, Deluxe, Suite) to identify high-demand offerings and prioritize inventory.
+*   **Monthly Booking Trends:** Visualised seasonality across all booking statuses to support staffing and resource allocation during peak periods.
+*   **Room Type Popularity:** Displayed the proportion of bookings by room type (Standard, Deluxe, Suite) to identify guest preferences and prioritise high-demand offerings.
 
-### 3. Revenue & Demographic Optimization
-*   **Source Analysis:** Analyzed the distribution of bookings across acquisition channels (Website, Travel Agents, Walk-ins) to inform targeted marketing ROI.
-*   **Profitability by Source:** Identified the most profitable booking sources segmented by Room Type, allowing management to optimize third-party partnerships.
-*   **Demographic Revenue:** Visualized revenue proportion by age category, highlighting the core customer segments driving profitability.
+### 3. Revenue & Demographic Optimisation
+*   **Source Analysis:** Analysed the distribution of bookings across acquisition channels (Website, Travel Agents, Walk-ins) to inform targeted marketing ROI.
+*   **Profitability by Source:** Identified the most profitable booking sources segmented by Room Type, allowing management to optimise third-party partnerships.
+*   **Demographic Revenue:** Visualised revenue proportion by age category, highlighting the core customer segments driving profitability.
 
 ### 4. Interactive Data Exploration
 *   **Detailed Booking Ledger:** Developed a granular table containing full guest itineraries, room types, and generated revenue.
@@ -34,16 +34,16 @@ Engineered custom DAX measures to provide an instant operational snapshot:
 
 ## 📸 Dashboard Visualisation & Architecture
 
-### 1. Executive View (Default)
-This view provides the high-level KPIs, including the £147K total revenue and overall demographic splits.
+### 1. Executive Revenue Overview
+This view showcases the high-level KPIs, providing an instant summary of the £147K total revenue and demographic segmentation.
 ![Main Dashboard](Dashboard_main.png)
 
-### 2. Interactive Filtering (Booking Source: Website)
-The dashboard is fully interactive. In this view, the data is sliced to show only bookings originating from the 'Website', dynamically updating the revenue and room type visuals.
+### 2. Dynamic Data Exploration
+By utilising interactive slicers (e.g., filtering for 'Website' bookings), the dashboard dynamically updates all visuals, allowing for granular performance analysis.
 ![Filtered Dashboard](dashboard_filtered.png)
 
-### 3. Relational Data Model (1-to-Many)
-The foundation of the dashboard. The `Guests` and `Bookings` tables are connected via a 1-to-Many relationship, ensuring data integrity and accurate DAX calculations.
+### 3. Relational Data Model (ERD)
+The backend architecture utilises a 1-to-Many relationship between the 'Guests' and 'Bookings' tables to ensure data integrity and efficient DAX calculations.
 ![Data Model](data_model.png)
 
 ### 🧠 DAX Logic & Analytical Measures
