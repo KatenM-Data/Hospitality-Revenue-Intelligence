@@ -36,7 +36,7 @@ Engineered custom DAX measures to provide an instant operational snapshot:
 
 ### 1. Executive View (Default)
 This view provides the high-level KPIs, including the £147K total revenue and overall demographic splits.
-![Main Dashboard](dashboard_main.png)
+![Main Dashboard](Dashboard_main.png)
 
 ### 2. Interactive Filtering (Booking Source: Website)
 The dashboard is fully interactive. In this view, the data is sliced to show only bookings originating from the 'Website', dynamically updating the revenue and room type visuals.
