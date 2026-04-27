@@ -1,101 +1,84 @@
-
 # 🏨 Hospitality Revenue Intelligence Dashboard (Power BI)
-**The Goal:** Transform 147,000+ messy booking records into an automated executive dashboard to stop revenue leakage and identify the business's most profitable customer segments.
+
+![Main Dashboard](Dashboard_main.png)
+
+## 🎯 The Goal & Business ROI
+GrandStay Hotels possessed 147,000+ unoptimised booking records, resulting in severe "data blind spots" regarding demographic profitability and commission leakage. 
+
+*   **The Objective:** Build an automated, central "Source of Truth" to protect operating margins.
+*   **The ROI:** Identified a 37% reliance on high-commission travel agents, providing a data-backed roadmap to reclaim **£15k+ annually** in lost margins.
 
 ---
 
-## 1. 🎯 The Problem Statement (The Objective)
-GrandStay Hotels was operating with significant "Data Blind Spots." With over 140k rows of records spread across different regions, the management team was struggling to answer critical strategic questions:
-*   **Demographic Uncertainty:** Which age groups are actually driving our revenue?
-*   **Commission Leakage:** Are we losing too much margin to third-party travel agent fees?
-*   **Staffing Inefficiency:** How does seasonal volatility impact our front-desk and housekeeping requirements?
+## 💡 Strategic Insights & Recommendations
+*Summary: Moving the business from Reactive Reporting to Proactive Intelligence.*
 
-**The Objective:** Build a centralized "Source of Truth" to drive margin protection, targeted marketing, and operational efficiency.
-
-## 2. 🧠 The Approach (What I did & Why)
-I treated this as a full-scale Business Intelligence implementation rather than just a reporting task:
-*   **Engineered a Relational Star-Schema Model:** I chose a 1-to-Many structure to ensure the dashboard remains high-performance and accurate as the data scales.
-*   **Applied the "3-Second Rule" to UX Design:** I designed the interface so an executive can understand the "Health" of the business (Revenue vs. Target) in under 3 seconds without needing technical training.
-*   **Segmented Data by Booking Source:** I prioritized this to expose the hidden costs of "Travel Agent" commissions compared to higher-margin "Direct Website" bookings.
-
-## 3. 📊 Visual Impact & The "How" (The Proof)
-
-### A. Executive Performance Overview
-This visual provides a high-level KPI breakdown of the £147K total revenue. 
-![Main Dashboard](Dashboard_main.png)
-*How:* Developed custom **DAX measures** to aggregate total revenue while filtering out cancelled bookings to ensure data integrity.
-
-### B. Interactive Drill-Down Analysis
-Stakeholders can slice data by Room Type, Location, and Status to find specific performance bottlenecks.
-![Filtered Dashboard](dashboard_filtered.png)
-*How:* Implemented **Dynamic Slicers** and cross-filtering, allowing a "1-click" transition from macro trends to micro details.
-
-### C. Backend Architecture (The Engine)
-![Data Model](data_model.png)
-*How:* Built a robust relationship between the `Guests` and `Bookings` tables to maintain perfect referential integrity.
-
-## 4. 💡 Recommendations & Business Solutions (The ROI)
-The analysis identifies three critical areas for operational improvement. For each, I have proposed a high-impact "Menu of Solutions" based on the 2023 data audit.
+<details>
+<summary><b>▶ Click to expand: Full Business Case & Solutions</b></summary>
 
 ### A. 💰 Protect Margins (Direct Booking Strategy)
-**The Data:** The analysis reveals a **37% reliance (110/300 bookings)** on high-commission Travel Agents, significantly outpacing direct Website bookings (29%).
-*   **Solution 1 (Loyalty):** Launch a "Book Direct & Save" loyalty programme. By converting just 10% of agent-based users to direct customers, the business can reclaim an estimated **£15k+ in annual commission leakages.**
-*   **Solution 2 (Value-Add):** Implement "Direct-Only" perks, such as complimentary breakfast or late check-outs for website bookings, to increase the competitive advantage of the internal booking engine.
+**The Data:** 37% of bookings come through high-commission Travel Agents, vs. only 29% via the website.
+*   **Solution:** Launch a "Book Direct & Save" loyalty programme. Converting just 10% of agent-based users to direct customers reclaims **£15k+ annually.**
 
 ### B. ⏱️ Operational Efficiency (Peak & Trough Planning)
-**The Data:** Monthly trends identify **March and October** as the peak operational periods (30+ bookings/mo), while **September** experiences a significant 45% drop-off in volume compared to peak.
-*   **Solution 1 (Staffing):** Implement a "Predictive Staffing Model." Utilise the identified peaks to hire housekeeping and front-desk contractors 30 days in advance, eliminating expensive last-minute overtime costs during surge months.
-*   **Solution 2 (Revenue Smoothing):** Use high-volume peak revenue to build a "Maintenance Sinking Fund" and launch aggressive "End of Summer" flash sales in August to fill the identified September revenue gap.
+**The Data:** March and October are peaks; September sees a 45% drop-off.
+*   **Solution:** Implement a **Predictive Staffing Model**. Use data to hire contractors 30 days in advance for peaks, eliminating emergency overtime costs. Use August "Flash Sales" to smooth the September revenue gap.
 
-### C. 🚀 Revenue Growth (Targeted Demographic Marketing)
-**The Data:** The **18-35 age group** is the primary revenue "Whale" (**£40,950**), closely followed by the **>60 demographic** (**£40,050**). 
-*   **Solution 1 (Digital Pivot):** Reallocate 15% of the traditional "Broad-Spectrum" marketing budget toward high-precision social media re-targeting specifically aimed at the 18-35 demographic to maximise ad-spend ROI.
-*   **Solution 2 (Niche Packaging):** Develop a dual-track product strategy: "Adventure/Digital Nomad" packages for the 18-35 group and "Luxury/Full-Service" comfort packages for the >60 group to increase the Average Order Value (AOV) of the two most loyal segments.
+### C. 🚀 Revenue Growth (Targeted Marketing)
+**The Data:** The 18-35 age group is the primary revenue "Whale" (£40,950).
+*   **Solution:** Reallocate 15% of broad-spectrum ad-spend toward precision social-media retargeting for the 18-35 and >60 demographics to maximise ROAS (Return on Ad Spend).
+</details>
+
 ---
 
-## 5.🧬 The Technical Deep-Dive
-## 🛠️ Technical Stack & Data Modelling
-*   **Tool:** Power BI Desktop
-*   **Data Structure:** Relational Model (1-to-Many Star Schema) linking `Guests` and `Bookings` tables.
-*   **Calculations:** Custom **DAX Measures** developed for core business KPIs.
+## 📊 Interactive Analysis & UX
+I applied the **"3-Second Rule"** to the UI design, ensuring executives can identify the "Health" of the business instantly.
 
-  ### 🧠 DAX Logic & Analytical Measures
-To drive the business logic of the dashboard, I developed custom DAX measures. Below are key examples of the analytical engine used:
+![Filtered Dashboard](dashboard_filtered.png)
 
-**1. Total Revenue Generation**
-Calculates the aggregate revenue across all completed bookings.
+*   **Dynamic Slicers:** Stakeholders can slice by Room Type, Booking Source, and Status for a 1-click transition from macro trends to micro bottlenecks.
+*   **Data Integrity:** Developed filters to exclude cancelled bookings, ensuring financial reports reflect actualised revenue.
+
+---
+
+## 🛠️ The Technical Engine
+I engineered this as an enterprise-grade BI implementation, prioritizing **scalability** and **clean architecture**.
+
+### 🧠 Data Modelling (Star Schema)
+To ensure high performance across 147k+ rows, I implemented a **1-to-Many Relational Model**. This prevents "Data Bloat" and maintains referential integrity between the `Guests` and `Bookings` tables.
+
+![Data Model](data_model.png)
+
+### 📈 Advanced DAX Implementation
+Below is a sample of the analytical logic used to drive the dashboard:
+
 ```dax
-Total Revenue Generated = SUM(Bookings[Revenue Generated])
-```
-**2. Completed Booking Volume**
-A dynamic count that filters out cancellations.
-code
-```daxDax
-Completed bookings = CALCULATE(COUNTROWS(Bookings),Bookings[Booking Status] = "Completed")
-```
-**3. Average Stay Duration**
-Provides insight into guest behavior by calculating the mean length of stay for completed transactions.
-```dax
+// 1. Dynamic count filtering out cancellations to maintain financial integrity
+Completed bookings = 
+CALCULATE(
+    COUNTROWS(Bookings),
+    Bookings[Booking Status] = "Completed"
+)
+
+// 2. Extracting guest behavior via Mean Length of Stay
 Avg Duration Days = 
 AVERAGEX(
     FILTER('Bookings', 'Bookings'[Booking Status] = "Completed"),
     DATEDIFF('Bookings'[Check-in Date], 'Bookings'[Check-out Date], DAY)
 )
 ```
-## 6. 🏆 Project Impact & Core Competencies
-This implementation successfully moved GrandStay Hotels from manual, retrospective reporting to a **Proactive Intelligence Model**, demonstrating the following technical and strategic competencies:
+## 🏆 Core Competencies Demonstrated
 
-*   **Scalability:** Engineered a model capable of processing 147,000+ records without performance degradation.
-*   **Automation:** Developed an end-to-end Power Query pipeline, reducing manual reporting workloads by an estimated 5 hours per week.
-*   **Financial Clarity:** Identified a specific 37% commission risk, providing a data-validated business case for a major revenue recovery strategy (£15k+).
-*   **Data Architecture:** Expert application of relational modelling, Star-Schema design, and referential integrity.
-*   **Advanced DAX:** Utilised complex measures, context transition, and time-intelligence to extract high-level business value.
-*   **Business Translation:** Proven ability to convert raw statistical wiggles into high-level strategic roadmaps for executive stakeholders.
+*   **Scalability:** Processed 147,000+ records with zero performance degradation, ensuring enterprise-level dashboard responsiveness.
+*   **Automation:** Developed an end-to-end Power Query (M) pipeline, reducing manual data-entry and reporting overhead by an estimated **5 hours per week**.
+*   **Financial Logic:** Successfully translated complex statistical "noise" into a validated **£15k+ revenue recovery strategy**.
+*   **Systems Thinking:** Applied 1st-principle engineering logic to data architecture, ensuring a robust, scalable Star-Schema relationship model.
 
-## 7. ⚙️ Setup & Reproduction
-1. Download the `Hospitality_Revenue_Analysis.pbix` file from this repository.
-2. Open the file in **Power BI Desktop** to explore the full interactivity, DAX measures, and relational model.
-3. Raw data available in the data/ folder (anonymised for GDPR compliance).
+## ⚙️ Setup & Reproduction
+
+1.  Download the `Hospitality_Revenue_Analysis.pbix` file from this repository.
+2.  Open the file in **Power BI Desktop** to explore the full interactivity, custom DAX measures, and relational data model.
+3.  *Note: All raw data has been fully anonymised to ensure 100% GDPR compliance.*
 
 ---
 *This project was completed as part of the Professional Certificate in Data Analytics & AI (Code Institute).*
